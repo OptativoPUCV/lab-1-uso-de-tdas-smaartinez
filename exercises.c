@@ -63,8 +63,8 @@ int sumaLista(List *L) {
    int *numero = first(L);
    while (numero != NULL)
    {
-      sum += *numero
-      *numero = next(L);
+      sum += *numero;
+      (*numero) = next(L);
 
    }
    
