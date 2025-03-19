@@ -4,3 +4,15 @@ Wed, Mar 19, 2025  9:26:05 AM:
  tests:  1|4
 total_score: 10/70
 3f6cb15
+Wed, Mar 19, 2025 10:13:22 AM: 
+ exercises.c | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'sumaLista':
+exercises.c:67:7: error: invalid operands to binary * (have 'int' and 'int *')
+       sum += *numero
+              ~~~~~~~
+       *numero = next(L);
+       ^
+Compilation failed
+ec5cb4f
