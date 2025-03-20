@@ -59,3 +59,18 @@ Wed, Mar 19, 2025 10:54:44 AM:
  tests:  3|2
 total_score: 40/70
 f923240
+Thu, Mar 20, 2025 12:42:54 AM: 
+ exercises.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'copia_pila':
+exercises.c:110:26: error: implicit declaration of function 'createStack' [-Werror=implicit-function-declaration]
+    Stack* pilaAuxiliar = createStack();
+                          ^~~~~~~~~~~
+exercises.c:110:26: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]
+exercises.c:110:11: error: unused variable 'pilaAuxiliar' [-Werror=unused-variable]
+    Stack* pilaAuxiliar = createStack();
+           ^~~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+2ab22e9
