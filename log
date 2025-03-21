@@ -80,3 +80,39 @@ Thu, Mar 20, 2025 12:53:10 AM:
  tests:  4|1
 total_score: 50/70
 aa73707
+Fri, Mar 21, 2025 11:42:01 AM: 
+ exercises.c | 20 +++++++++++++++++++-
+ 1 file changed, 19 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:146:21: error: passing argument 2 of 'push' makes pointer from integer without a cast [-Werror=int-conversion]
+          push(pila, caracter);
+                     ^~~~~~~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:11:6: note: expected 'void *' but argument is of type 'char'
+ void push(Stack *stack, void *data) { pushFront(stack, data); }
+      ^~~~
+In file included from test.c:5:0:
+exercises.c:151:28: error: passing argument 1 of 'pop' from incompatible pointer type [-Werror=incompatible-pointer-types]
+          char maximo = pop(&pila);
+                            ^
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:17:7: note: expected 'Stack * {aka struct List *}' but argument is of type 'Stack ** {aka struct List **}'
+ void *pop(Stack *stack) { return popFront(stack); }
+       ^~~
+In file included from test.c:5:0:
+exercises.c:151:24: error: initialization makes integer from pointer without a cast [-Werror=int-conversion]
+          char maximo = pop(&pila);
+                        ^~~
+exercises.c:151:15: error: unused variable 'maximo' [-Werror=unused-variable]
+          char maximo = pop(&pila);
+               ^~~~~~
+exercises.c:153:24: error: 'maximo' undeclared (first use in this function)
+       if ( (caracter - maximo != 1) && (caracter - maximo != 2) ) return 1;
+                        ^~~~~~
+exercises.c:153:24: note: each undeclared identifier is reported only once for each function it appears in
+cc1.exe: all warnings being treated as errors
+Compilation failed
+2b4beda
