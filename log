@@ -297,3 +297,23 @@ exercises.c:150:24: error: initialization makes integer from pointer without a c
 cc1.exe: all warnings being treated as errors
 Compilation failed
 66280c2
+Fri, Mar 21, 2025 11:58:05 AM: 
+ exercises.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:146:21: error: passing argument 2 of 'push' makes pointer from integer without a cast [-Werror=int-conversion]
+          push(pila, caracter);
+                     ^~~~~~~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:11:6: note: expected 'void *' but argument is of type 'char'
+ void push(Stack *stack, void *data) { pushFront(stack, data); }
+      ^~~~
+In file included from test.c:5:0:
+exercises.c:150:24: error: initialization makes integer from pointer without a cast [-Werror=int-conversion]
+          char maximo = top(pila);
+                        ^~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+c18250f
