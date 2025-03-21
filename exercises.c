@@ -150,10 +150,8 @@ int parentesisBalanceados(char *cadena)
          char maximo = top(pila);
          if (maximo == '\0') return 0;
       
-         if ((caracter == ')' && maximo != '(') || 
-                (caracter == '}' && maximo != '{') || 
-                (caracter == ']' && maximo != '[')) {
-                return 0;
+         if ((caracter == ')' && maximo != '(') || (caracter == '}' && maximo != '{') || (caracter == ']' && maximo != '[')) return 0;
+                
       }
       
    }
